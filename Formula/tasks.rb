@@ -5,20 +5,20 @@
 class Tasks < Formula
   desc "A simple todoist application"
   homepage "https://github.com/mrinjamul/tasks"
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrinjamul/tasks/releases/download/v1.1.0/tasks_1.1.0_darwin_amd64.tar.gz"
-      sha256 "53e0e7c08d4636885fac51a960250fb0b39b88b9c6d688776b1d31e284feed88"
+      url "https://github.com/mrinjamul/tasks/releases/download/v1.1.1/tasks_1.1.1_darwin_amd64.tar.gz"
+      sha256 "00090f1a4e877f17970f2ce60ead00537963b3b730026fb84086566b96e3c212"
 
       def install
         bin.install "tasks"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrinjamul/tasks/releases/download/v1.1.0/tasks_1.1.0_darwin_arm64.tar.gz"
-      sha256 "663afd4a1e44826241493e28bf0ee90d7e76d06160031dfce0bc0a8684f6d6b6"
+      url "https://github.com/mrinjamul/tasks/releases/download/v1.1.1/tasks_1.1.1_darwin_arm64.tar.gz"
+      sha256 "4c140b084f08c10364f31b1772e2717199b9f12c06fb2e5e0fd56646ecd01848"
 
       def install
         bin.install "tasks"
@@ -28,16 +28,16 @@ class Tasks < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mrinjamul/tasks/releases/download/v1.1.0/tasks_1.1.0_linux_amd64.tar.gz"
-      sha256 "1ecd39dde436490548893e35f14a838eded11d3334ed6781e3cc2b954bdb9641"
+      url "https://github.com/mrinjamul/tasks/releases/download/v1.1.1/tasks_1.1.1_linux_amd64.tar.gz"
+      sha256 "c8e055034f74fa26556adbeb6da4194594eb914496383f96972954ce7a17e3f3"
 
       def install
         bin.install "tasks"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrinjamul/tasks/releases/download/v1.1.0/tasks_1.1.0_linux_arm64.tar.gz"
-      sha256 "d4b4fc0d8efa98d8866eb27319115205fc36a0797ce484211e9d6aa8c04f875d"
+      url "https://github.com/mrinjamul/tasks/releases/download/v1.1.1/tasks_1.1.1_linux_arm64.tar.gz"
+      sha256 "5ed59e7f4b80b6a8f6916670cab0999e2e1a3a43b3760f1df24dba27a4877d02"
 
       def install
         bin.install "tasks"
