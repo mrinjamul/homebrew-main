@@ -5,20 +5,20 @@
 class Sws < Formula
   desc "A simple (static) web server written in golang"
   homepage "https://github.com/mrinjamul/simple-web-server"
-  version "1.1.3"
+  version "1.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.1.3/simple-web-server_1.1.3_darwin_amd64.tar.gz"
-      sha256 "3059977a42ac000e988d1a7ed2e3aeba854a37734883955c283c8a2d03cd76e8"
+      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.2.0/simple-web-server_1.2.0_darwin_amd64.tar.gz"
+      sha256 "28d9ad0b6b847929427c7a331ee13bf819109811c4f98484bf7219adeac19187"
 
       def install
         bin.install "sws"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.1.3/simple-web-server_1.1.3_darwin_arm64.tar.gz"
-      sha256 "30ca413fa8abb7f1f216ace6184b8daf553b7f04703dec299cbfd81552f04585"
+      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.2.0/simple-web-server_1.2.0_darwin_arm64.tar.gz"
+      sha256 "f9b2076132bca9d2110a751b010683bc7734a19917ad309430031b307242ad9a"
 
       def install
         bin.install "sws"
@@ -28,16 +28,16 @@ class Sws < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.1.3/simple-web-server_1.1.3_linux_arm64.tar.gz"
-      sha256 "1830ca567aa7fc36269c2174696901814ed1aec8edfb9fef6afdbc73e1c45a6c"
+      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.2.0/simple-web-server_1.2.0_linux_arm64.tar.gz"
+      sha256 "1fe84c7a7225b7b5abfcced1bd1822fe07575075079ce7f412d4188ec49f32f0"
 
       def install
         bin.install "sws"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.1.3/simple-web-server_1.1.3_linux_amd64.tar.gz"
-      sha256 "c5ccc609a05423bf809f6b43cdbff68ead130886a05a250c9cc464a1b49b06cf"
+      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.2.0/simple-web-server_1.2.0_linux_amd64.tar.gz"
+      sha256 "2c1f4513f1fcb008877c520db100a8818588157c59c714faed296c80f09e5756"
 
       def install
         bin.install "sws"
