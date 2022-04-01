@@ -10,7 +10,7 @@ class Sws < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.2.0/simple-web-server_1.2.0_darwin_amd64.tar.gz"
-      sha256 "28d9ad0b6b847929427c7a331ee13bf819109811c4f98484bf7219adeac19187"
+      sha256 "b65d77ef207e4d2ff63a22f71f9378ff3b2c71f779501cdd76105c0ca5706500"
 
       def install
         bin.install "sws"
@@ -18,7 +18,7 @@ class Sws < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.2.0/simple-web-server_1.2.0_darwin_arm64.tar.gz"
-      sha256 "f9b2076132bca9d2110a751b010683bc7734a19917ad309430031b307242ad9a"
+      sha256 "77d8d2345d8b18e79616d9eb7533e339c878bab6b4b2d91098370e2232ebcc16"
 
       def install
         bin.install "sws"
@@ -27,17 +27,17 @@ class Sws < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.2.0/simple-web-server_1.2.0_linux_arm64.tar.gz"
-      sha256 "1fe84c7a7225b7b5abfcced1bd1822fe07575075079ce7f412d4188ec49f32f0"
+    if Hardware::CPU.intel?
+      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.2.0/simple-web-server_1.2.0_linux_amd64.tar.gz"
+      sha256 "c53671e987a34fe11979187ddd6b80a8aca15a6a4ebb11f54bb211c1122eea4a"
 
       def install
         bin.install "sws"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.2.0/simple-web-server_1.2.0_linux_amd64.tar.gz"
-      sha256 "2c1f4513f1fcb008877c520db100a8818588157c59c714faed296c80f09e5756"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mrinjamul/simple-web-server/releases/download/v1.2.0/simple-web-server_1.2.0_linux_arm64.tar.gz"
+      sha256 "ba02487d19d05bcd025473b01ab6e4977ec1950d874c2f1ac5cacf4183db4c74"
 
       def install
         bin.install "sws"
