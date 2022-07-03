@@ -6,20 +6,20 @@ require_relative "../lib/private_strategy"
 class MrinjamulCli < Formula
   desc "A CLI to sync domains from local to Cloudflare."
   homepage "https://mrinjamul.github.io/mrinjamul-cli"
-  version "1.1.2"
+  version "1.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrinjamul/mrinjamul-cli/releases/download/v1.1.2/mrinjamul-cli_1.1.2_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "ca86d2c38be7e08b83e0bb229ba17688b9275cd07f06e683cdb34873104c611a"
+      url "https://github.com/mrinjamul/mrinjamul-cli/releases/download/v1.1.3/mrinjamul-cli_1.1.3_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "2b46a08e4d18865dd078062086f43b679090c6e1193fb16fdd3f4d313ae379db"
 
       def install
         bin.install "mrinjamul-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrinjamul/mrinjamul-cli/releases/download/v1.1.2/mrinjamul-cli_1.1.2_darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "cbe574eb8e86531007ac4ec50da5d644bf59505e24ea63f32c33c9dbba594046"
+      url "https://github.com/mrinjamul/mrinjamul-cli/releases/download/v1.1.3/mrinjamul-cli_1.1.3_darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "360134013be4a1bbce67096385e5db9526760b237e959799b7f1d4fc4cd86cb7"
 
       def install
         bin.install "mrinjamul-cli"
@@ -28,17 +28,17 @@ class MrinjamulCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mrinjamul/mrinjamul-cli/releases/download/v1.1.2/mrinjamul-cli_1.1.2_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "1b4f966f1ceae1421e8bad521e9053821d207589b0931dd6b1620bdb797b0056"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mrinjamul/mrinjamul-cli/releases/download/v1.1.3/mrinjamul-cli_1.1.3_linux_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "71f2bddc2b98753e7dc5095b2f33502e4f20e81cf54086aa98aeeaf4d57602dc"
 
       def install
         bin.install "mrinjamul-cli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrinjamul/mrinjamul-cli/releases/download/v1.1.2/mrinjamul-cli_1.1.2_linux_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "67a44e32eca1f2eed7358bc471e2ed63389160784e169c6a359f27fb636848fe"
+    if Hardware::CPU.intel?
+      url "https://github.com/mrinjamul/mrinjamul-cli/releases/download/v1.1.3/mrinjamul-cli_1.1.3_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "ade6aba5470ae94e384c13350a973af059b7bc9253beb75544354f022b9b71e7"
 
       def install
         bin.install "mrinjamul-cli"
